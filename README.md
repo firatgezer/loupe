@@ -4,11 +4,13 @@ Cut out subjects, read text and scan QR codes and barcodes in images and PDFs, f
 
 loupe uses the Vision framework that ships with macOS, the same models behind Live Text and "Copy Subject" in Photos. It works offline, it is free, and your files never leave your Mac.
 
-![A photo of a stone house next to the same photo with the background removed](docs/cutout.jpg)
+![Three photos, a vase in a living room, a dog against a wall and a lighthouse under a blue sky, each above the same subject cut out by loupe](docs/cutout.webp)
+
+<sub>Top: the original photos. Bottom: `loupe cutout`, placed on a plain colour. Photos by [Mathilde Langevin](https://unsplash.com/photos/WUrXahlyjBo), [Cristofer Maximilian](https://unsplash.com/photos/5_nJw3UUgpQ) and [Phil S](https://unsplash.com/photos/GD-TykjO8K4) on Unsplash.</sub>
 
 ```console
-$ loupe cutout house.jpg
-house-cutout.png
+$ loupe cutout vase.jpg
+vase-cutout.png
 
 $ loupe text receipt.pdf
 Harbour Street Bakery
