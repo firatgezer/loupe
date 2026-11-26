@@ -8,9 +8,14 @@ on:
 jobs:
   test:
     runs-on: macos-15
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
       - name: Build
-        run: swift build
-      - name: Test
-        run: swift test
+        run: swift build --build-tests
+      - name: Parsing and documents
+        timeout-minutes: 5
+        run: swift test --skip-build --filter "PageSelectionTests|DocumentTests"
+      - name: Vision
+        timeout-minutes: 10
+        run: swift test --skip-build --filter "TextRecognizerTests|CodeScannerTests|CutoutTests"
